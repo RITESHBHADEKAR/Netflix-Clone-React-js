@@ -1,30 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import App from './App';
+import SignIn from './SignIn';
 
 const Navbar = () => {
+  // const [signup, login] = useState(false);
+  // const SignIn = () => {
+  //   login(!signup);
+  // };
   return (
-    <nav class='navbar navbar-light bg-light justify-content-between'>
-      <a
-        class='navbar-brand'
-        style={{
-          fontWeight: 800,
-          fontFamily: 'Cinzel',
-          color: 'red',
-          textDecoration: 'none',
-        }}
-      >
-        The Times Of India
-      </a>
-      <form class='form-inline'>
-        <input
-          class='form-control mr-sm-2'
-          type='search'
-          placeholder='Search'
-          aria-label='Search'
-        />
-        <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>
-          Search
-        </button>
-      </form>
+    <nav className='navbar '>
+      <div className='navbar-nav'>
+        <div>
+          <img src='Netflix-Logo.png' alt='logo' className='Netflix-logo' />
+        </div>
+        <div className='buttons'>
+          {/* languages */}
+          <button type='button' className='btn lang-btn'>
+            <span>
+              <img
+                className='internet-img img'
+                src='./public\internet.png'
+                alt=''
+              />
+            </span>
+            <select name='language' id='lang'>
+              <option value='ENGLISH'>ENGLISH</option>
+              <option value='हिंदी'>हिंदी</option>
+            </select>
+          </button>
+          <button type='button' onClick={SignIn} className='btn'>
+            Sign In
+          </button>
+        </div>
+      </div>
     </nav>
   );
 };

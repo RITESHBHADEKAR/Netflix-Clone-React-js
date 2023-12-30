@@ -97,23 +97,23 @@ h5 {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: 1rem;
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: 0.8rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 0.7rem;
 }
 
 .text {
@@ -158,7 +158,7 @@ ul {
   text-transform: capitalize;
 }
 .btn:hover {
-  background: rgb(197, 45, 45);
+  background: black;
   box-shadow: var(--shadow-3);
 }
 .btn-block {
@@ -167,131 +167,318 @@ ul {
 .news-article {
   position: relative;
 }
-.news-info {
-  position: absolute;
-  bottom: 10%;
-  left: 2%;
-  color: var(--white);
-}
+
 .navbar {
   display: flex;
   flex-direction: row;
-  /* border: 2px solid red; */
-  padding-top: 0.5rem;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.8);
 }
 .navbar-nav {
   display: flex;
+  width: 100%;
   flex-direction: row;
   gap: 1rem;
-  display: none;
+  justify-content: space-between;
+  /* border: 2px solid red; */
 }
-@media screen and (min-width: 768px) {
-  .navbar-nav {
-    display: flex;
-  }
+.Netflix-logo {
+  display: block;
+  width: 5rem;
+  object-fit: cover;
+  margin-left: 0.5rem;
 }
-.navbar-nav a {
-  color: var(--grey-600);
+.buttons {
+  display: flex;
+  width: 12rem;
+  align-items: center;
+  justify-content: space-between;
 }
-.navbar-toggle {
+.internet-img {
   width: 1rem;
-  /* display: none; */
+  filter: invert(1);
 }
-.navbar-toggle span{
+.lang-btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+#lang:hover {
+  cursor: pointer;
+}
+.buttons button {
   border: none;
-
-
+  margin: 0;
 }
-.news-title {
-  font-size: 1.5rem;
-}
-.news-text {
-  width: 500px;
-  max-width: 300px;
-  font-size: var(--extra-small-text);
-  line-height: 1.4;
-  margin-top: 0.75rem;
-}
-.news-Category {
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: capitalize;
-}
-.single-news {
-  position: relative;
-  background: var(--grey-100);
-  padding: 0.5rem;
-  box-shadow: var(--shadow-1);
-}
-.single-news:hover {
-  box-shadow: var(--shadow-2);
-}
-.location {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+.buttons select {
+  border: none;
+  background: transparent;
   color: var(--white);
-  padding: 0.1rem 1rem;
-  text-transform: uppercase;
 }
-.news-container {
+.buttons select option {
+  border: red;
+  background: transparent;
+  color: var(--black);
+}
+.hero {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   align-items: center;
-  gap: 1rem;
-  justify-content: space-around;
-  padding: 1rem;
+  width: 100%;
+  height: 95vh;
+  margin-top: -4rem;
+  background: url(../public/netflix.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
-.single-news-title {
-  font-size: 1rem;
-  padding: 0.2rem;
-  letter-spacing: 0;
-  /* max-width: fit-content; */
-}
-
-
-@media screen and (min-width: 768px) {
-  .news-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 900px) {
-  .news-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.reporter-info {
+.hero-item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-bottom: 0.5rem;
-  padding-top: 0.75rem;
-}
-.reporter-info p {
-  padding-left: 0.5rem;
-  font-size: var(--extra-small-text);
-}
-.reporter-img {
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-}
-.read-more {
-  color: red;
-}
-footer {
-  padding: 1rem;
-  padding-top: 0;
-  max-width: 1200px;
+  flex-direction: column;
+  width: 90%;
+  height: 90vh;
+  /* border: 2px solid red; */
   margin: 0 auto;
-}
-.footer-items {
-  display: flex;
-  gap: 1rem;
+  align-items: center;
   justify-content: center;
 }
-.footer-text {
+.hero-text {
+  /* border: 2px solid white; */
+  /* width: 100%; */
+  /* max-width: 100%; */
   text-align: center;
+  color: var(--white);
+  /* margin: 0 auto; */
+  padding-top: 5rem;
+}
+.hero-text h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1;
+}
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2;
+}
+.hero-text h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.hero-btns {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  width: 70%;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+.hero-btns .btn {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+.hero-btns input {
+  color: red;
+}
+.next-btn {
+  width: 0.8rem;
+  margin-left: 0.5rem;
+  padding: 0;
+  filter: invert(1);
+}
+@media screen and (max-width: 768px) {
+  .hero-btns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
+  .getbtn {
+    max-width: 60%;
+    justify-self: center;
+    padding: 1rem;
+  }
+}
+
+/* section-1 */
+.articles {
+  width: 100%;
+  height: auto;
+  background: #000;
+  position: relative;
+}
+.article-border {
+  border: 4px solid grey;
+}
+.section-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  border: 3px solid grey;
+}
+/* .section-articles {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  place-items: center;
+  position: relative;
+} */
+.section-text {
+  text-align: left;
+  max-width: 100%;
+  padding: 1rem;
+}
+.section-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.section-img {
+  height: auto;
+  max-width: 100%;
+}
+.section-text h3 {
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+  .section-item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .section-text h3 {
+    font-size: 1rem;
+  }
+  .section-text h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+.loading {
+  position: absolute;
+  bottom: 10%;
+  left: 9.5%;
+  width: 20rem;
+  height: 7rem;
+  background: #000;
+  border: 2px solid grey;
+  border-radius: 1rem;
+}
+.loading-item {
+  display: flex;
+  place-items: center;
+}
+.loading-text {
+  color: blue;
+  padding: 0.2rem;
+}
+.loading-img {
+  object-fit: cover;
+  height: 7rem;
+  padding: 0.5rem;
+}
+footer {
+  display: block;
+  background: #000;
+  padding: 1.5rem;
+  max-width: 100%;
+}
+.footer-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+  justify-content: center;
+  margin: 1.5rem auto;
+}
+footer p {
+  display: flex;
+  text-align: center;
+  justify-content: left;
+  color: grey;
+}
+footer p a {
+  margin: 0;
+  padding: 0;
+}
+footer a {
+  display: block;
+  color: gray;
+}
+footer a:hover {
+  color: red;
+}
+footer li {
+  padding: 0.2rem;
+}
+/* sign in homepage */
+
+.login-form {
+  display: grid;
+  place-items: center;
+  /* border: 2px solid yellow; */
+  height: 100%;
+  /* padding: 2rem; */
+  background: rgba(0, 0, 0, 0.4);
+  /* padding: 3rem; */
+}
+.login {
+  display: flex;
+  /* border: 2px solid yellow; */
+  flex-direction: column;
+  width: auto;
+  max-width: 30rem;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  padding: 3rem;
+  /* margin: 1rem; */
+}
+.login h1 {
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+.login-inputs {
+  background: rgb(74, 72, 72);
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: grey;
+  margin: 0.5rem;
+}
+.login-inputs::placeholder {
+  color: grey;
+}
+.login-footer .footer-items {
+  width: 95%;
+  padding: 0.75rem;
+}
+.login-footer li a {
+  padding: 0.2rem;
+}
+.login-footer {
+  background: rgba(0, 0, 0, 0.9);
+}
+.submit-btn {
+  background: red;
+  margin-top: 3rem;
+}
+.flex {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.flex a {
+  color: var(--white);
+}
+.login-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: grey;
+}
+.login-texts div {
+  padding: 0.3rem;
 }
